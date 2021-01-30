@@ -100,6 +100,11 @@ just need to be commited.
 - `key-mapper-autoload.desktop` executes on login and tells the systemd
   service to stop injecting (possibly the presets of another user) and to
   inject the users autoloaded presets instead (if any are configured)
+  
+**udev**
+
+- `key-mapper.rules` sends a message to the service to start injecting
+  for new devices when they are seen for the first time. TODO
 
 ## Resources
 

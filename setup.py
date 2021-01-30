@@ -44,6 +44,7 @@ setup(
         ('/usr/lib/systemd/system', ['data/key-mapper.service']),
         ('/etc/dbus-1/system.d/', ['data/keymapper.Control.conf']),
         ('/etc/xdg/autostart/', ['data/key-mapper-autoload.desktop']),
+        ('/etc/udev/rules.s', ['data/key-mapper.rules']),
         ('/usr/bin/', ['bin/key-mapper-gtk']),
         ('/usr/bin/', ['bin/key-mapper-gtk-pkexec']),
         ('/usr/bin/', ['bin/key-mapper-service']),

@@ -149,6 +149,38 @@ class Daemon:
         injector = self.injectors.get(device)
         return injector.get_state() if injector else UNKNOWN
 
+    def set_config_dir(self, config_dir):
+        """On login this should be called to use a different config directory.
+
+        Parameters
+        ----------
+        config_dir : string
+            This path contains config.json, xmodmap.json and the
+            presets directory
+        """
+        # TODO implement
+        # TODO dbus specification
+        # TODO deprecates the config_dir param of start_injecting
+        # TODO change preset_path to preset in start_injecting
+        # TODO deprecates stuff in key-mapper-command
+        # TODO log info
+        # TODO test
+
+    def autoload(self):
+        """Load all autoloaded presets for the current config_dir."""
+        # TODO implement
+        # TODO dbus specification
+        # TODO deprecates autoload of key-mapper-autoload.desktop
+        # TODO
+        #  stop + autoload:
+        #    autoload again
+        #  unplug + autoload: (which is basically autoload + autoload)
+        #    don't augoload again, even if no injection running. To leave
+        #    the option of stopping the injection by unplugging the device
+        #    open if the pc cannot be controlled anymore.
+        # TODO log info
+        # TODO test
+
     def start_injecting(self, device, preset_path, config_dir=None):
         """Start injecting the preset for the device.
 

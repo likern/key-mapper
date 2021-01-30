@@ -1,0 +1,1 @@
+KERNEL=="sd*", RUN+="key-mapper-control --command autoload"
