@@ -91,7 +91,7 @@ def main(options, daemon):
         sys.exit(0)
 
     if options.command == AUTOLOAD:
-        daemon.stop()
+        # TODO removed stop (tests?) daemon.stop()
         for device, preset in list(config.iterate_autoload_presets()):
             if not isinstance(preset, str):
                 # broken
