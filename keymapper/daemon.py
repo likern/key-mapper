@@ -88,6 +88,7 @@ def get_dbus_interface(fallback=True):
         logger.warning(msg)
         return Daemon()
 
+    logger.debug('Connected to the service')
     return interface
 
 
