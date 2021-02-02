@@ -123,7 +123,7 @@ class Window:
         self.selected_device = None
         self.selected_preset = None
 
-        """logger.debug('Loading style')
+        logger.debug('Loading style')
         css_provider = Gtk.CssProvider()
         with open(get_data_path('style.css'), 'r') as file:
             data = (
@@ -138,7 +138,7 @@ class Window:
             Gdk.Screen.get_default(),
             css_provider,
             Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-        )"""
+        )
 
         logger.debug('Building interface')
         gladefile = get_data_path('key-mapper.glade')

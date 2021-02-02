@@ -31,6 +31,9 @@ gi.require_version('Gtk', '3.0')
 gi.require_version('GLib', '2.0')
 from gi.repository import Gtk
 
+# https://github.com/Nuitka/Nuitka/issues/607#issuecomment-650217096
+Gtk.init()
+
 from keymapper.logger import update_verbosity, log_info
 from keymapper.gtk.window import Window
 from keymapper.daemon import Daemon
